@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../Partials/BootStrap.ejs') %>
+    <style>
+        #pic {
+            background: url("../images/example2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            height: 400px;
+        }
+        #words {
+            height: 400px;
+        }
+    </style>
+</head>
+<body >
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand ps-2" href="/">TestApp2</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href=""><%= response.user %></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="text-center mx-auto pt-5" id="pic">
+        
+    </div>        
+    <div class="text-center mx-auto mt-1 pt-5" style="width: 480px;" id="words">
+        <div class="text-center mx-auto mt-1 pt-5" style="width: 480px;">
+            
+            <h2 class="h3 mb-3 front-weight-normal">TestApp2</h2>
+            <p>Welcome to the TestApp2 <%= response.user %>!</p>
+                    
+        
+        </div>
+    </div>
+    <%- include('../Partials/Footer.ejs') %>    
+</body>
+</html>
